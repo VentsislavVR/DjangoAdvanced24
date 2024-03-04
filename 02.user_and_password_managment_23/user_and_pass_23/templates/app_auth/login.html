@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+{{ request.user }}
+
+<form action="{% url 'login_user' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" value="{{ next }}" name="next" />
+
+    <div>
+        <button>Login</button>
+        or
+        <a href="{% url 'register_user' %}">Register</a>
+    </div>
+</form>
+
+{% endblock %}
