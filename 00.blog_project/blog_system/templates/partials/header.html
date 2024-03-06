@@ -1,3 +1,4 @@
+{% load create_blog %}
 <header class="site-header">
     <div class="site-content header-wrapper">
     <h1>Blogs</h1>
@@ -8,11 +9,9 @@
                     Home
                 </a>
             </li>
-
+        
             <li>
-                <a href="{% url 'blog_create' %}">
-                    Create blog
-                </a>
+                {% create_blog user %}
             </li>
             {% if user.is_authenticated %}
                 <li>

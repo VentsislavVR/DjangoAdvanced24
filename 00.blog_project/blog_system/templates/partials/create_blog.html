@@ -1,0 +1,6 @@
+
+{% if disabled %}
+    <a disabled="disabled" class="disabled" >Create Blog</a>
+{% else %}
+    <a href="{% url 'blog_create' %}">Create Blog</a>
+{% endif %}

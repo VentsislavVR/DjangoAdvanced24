@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog_system.blogs',
     'blog_system.authentication',
+    'blog_system.common',
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,5 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGIN_URL = reverse_lazy('sign_in')
 

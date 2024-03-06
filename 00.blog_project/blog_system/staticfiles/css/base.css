@@ -32,6 +32,14 @@ COMPONENTS
     max-width: 960px;
     margin: 0 auto;
 }
+.disabled {
+   cursor: not-allowed;
+    pointer-events: none;
+    color : grey;
+}
+/*
+site styles
+*/
 .site-header {
     background-color: black ;
     color: #fff;

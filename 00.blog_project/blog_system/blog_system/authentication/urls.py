@@ -7,3 +7,5 @@ urlpatterns = (
     path('sign-in/', SignInView.as_view(), name='sign_in'),
     path('sign-out/', SignOutView.as_view(), name='sign_out'),
 )
+
+from .receivers import *
