@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'blog_system.blogs',
     'blog_system.authentication',
     'blog_system.common',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,5 @@
-
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     {{ blog.name }}
@@ -7,4 +7,29 @@
 
 {% block content %}
     {{ blog.name }}
+    <form id="form-create-post" action="{% url 'post_create_api' %}" method="post">
+        <label>
+            Title: <input type="text" name="title">
+        </label>
+        <label>
+            Text: <input type="text" name="Text">
+        </label>
+        <input type="text" name="blog_id" value="{{ blog.id }}" hidden="hidden">
+    <button>Create</button>
+    
+
+    </form>
+    <ul>
+        {% for post in blog.post_set.all %}
+            <li>
+                {{ post.title }}
+            </li>
+
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
+{% block scripts_body_end %}
+    <script src="{% static 'js/create_post.js' %}"></script>
 {% endblock %}

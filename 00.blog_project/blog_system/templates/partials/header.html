@@ -15,6 +15,9 @@
             </li>
             {% if user.is_authenticated %}
                 <li>
+                    <a href="">{{ user.username }}</a>
+                </li>
+                <li>
                 <a href="{% url 'sign_out' %}">
                     Sign Out
                 </a>
