@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+    	Rachev Blogs
+    {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+{% include 'partials/header.html' %}
+<div class="site-content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
